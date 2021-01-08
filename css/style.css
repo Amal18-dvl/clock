@@ -1,0 +1,89 @@
+body {
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #091921;
+}
+.clock-face {
+  width: 24rem;
+  height: 24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../image/clock (1).png");
+  background-size: cover;
+  margin: 0 auto;
+  border: 3px solid #091921;
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgba(225, 225, 225, 0.05),
+    inset 0 -15px 15px rgba(225, 225, 225, 0.05), 0 15px 15px rgba(0, 0, 0, 4),
+    inset 0 15px 15px rgba(0, 0, 0, 4);
+}
+
+.clock-face:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+.hand {
+  position: absolute;
+}
+
+.haour-hand {
+  width: 160px;
+  height: 160px;
+}
+
+.big-hand {
+  width: 230px;
+  height: 230px;
+}
+
+.small-hand {
+  width: 190px;
+  height: 190px;
+}
+.haour-hand,
+.big-hand,
+.small-hand {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.haour-hand::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #ffc600;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+.small-hand::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 140px;
+  background: #fff;
+  border-radius: 6px 6px 0 0;
+  z-index: 11;
+}
+
+.big-hand::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 120px;
+  background: #fff;
+  border-radius: 6px 6px 0 0;
+  z-index: 12;
+}
